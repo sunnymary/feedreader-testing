@@ -26,7 +26,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it("URL defined", function() {
+        it("shoud have URL defined", function() {
             allFeeds.forEach(function(oneFeed) {
                 expect(oneFeed.url).toBeDefined();
                 expect(oneFeed.url).not.toBe("");
@@ -37,7 +37,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it("name defined", function() {
+        it("should have name defined", function() {
             allFeeds.forEach(function(oneFeed) {
                 expect(oneFeed.name).toBeDefined();
                 expect(oneFeed.name).not.toBe("");
@@ -51,7 +51,7 @@ $(function() {
         /* This is a test that ensures the menu element is
          * hidden by default.
          */
-        it("hidden by default", function() {
+        it("should be hidden by default", function() {
             expect($("body").hasClass("menu-hidden")).toBe(true);
         });
 
@@ -60,7 +60,7 @@ $(function() {
          * should have two expectations: menu display when
          * clicked and hide when clicked again.
          */
-        it("toggle menu visibility when click menu icon", function() {
+        it("should toggle menu visibility when click menu icon", function() {
             var $menuIcon = $('.menu-icon-link');
             //click once, open menu
             $menuIcon.trigger("click");
