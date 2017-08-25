@@ -9,13 +9,10 @@ In this project, A web-based application that reads RSS feeds. It included [Jasm
 
 How to Run the app
 ------------------
-### First Method
 1. Download the repository.
 2. Unzip the files.
 3. Open the "index.html" in your browser to open the web page.
 4. Jasimine is include in the bottom of the page.
-### Second Method
-Directly open the follow link:
-[https://sunnymary.github.io/feedreader-testing/](https://sunnymary.github.io/feedreader-testing/)
+
 
 
