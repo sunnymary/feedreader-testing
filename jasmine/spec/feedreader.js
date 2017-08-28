@@ -89,7 +89,6 @@ $(function() {
             expect($(".feed").find(".entry")[0]).toBeDefined();
             done();
         });
-
     });
 
 
@@ -102,14 +101,18 @@ $(function() {
         var feedOne;
         var feedTwo;
         beforeEach(function(done) {
-            loadFeed(0, done);
-            feedOne = $(".feed");
-            loadFeed(1, done);
-            feedTwo = $(".feed");
+            loadFeed(0, function(){
+                feedOne = $(".feed").html();
+                loadFeed(1, function(){
+                    feedTwo = $(".feed").html();
+                    done();
+                })
+            });
         });
 
-        it("should load new feed when load feed", function() {
+        it("should load new feed when load feed", function(done) {
             expect(feedOne === feedTwo).toBe(false);
+            done();
         });
     });
 }());
