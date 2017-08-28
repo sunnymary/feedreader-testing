@@ -106,7 +106,7 @@ $(function() {
                 loadFeed(1, function(){
                     feedTwo = $(".feed").html();
                     done();
-                })
+                });
             });
         });
 
